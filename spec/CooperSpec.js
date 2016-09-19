@@ -56,5 +56,13 @@ describe('Person', function() {
         expect(person.message).toEqual("Above Average");
       });
     });
+
+    describe("Age 17-19", function() {
+      it("Result should be \"Above Average\"", function(){
+        person = new Person({gender: 'male', age: 18, distance: 3000});
+        person.cooperResult(person.distance);
+        expect(person.message).toEqual("Excellent");
+      });
+    });
   });
 });
