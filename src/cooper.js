@@ -50,4 +50,22 @@ Person.prototype.getCooperTestMale = function(distance) {
       return 'Poor'
     }
   }
+  if(this.age>= 17 && this.age<= 19) {
+    if(distance >= 3000){
+      return 'Excellent'
+    }
+    if(distance >= 2700 && distance <= 2999){
+      return 'Above Average'
+    }
+    if(distance >= 2500 && distance <=2699){
+      return 'Average'
+    }
+    if(distance >= 2300 && distance <=2499){
+      return 'Below Average'
+    }
+    if(distance < 2300){
+      return 'Poor'
+    }
+  }
+
 };
