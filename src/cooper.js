@@ -3,3 +3,8 @@ function Person(attr) {
   this.age = attr.age;
   this.distance = attr.distance;
 };
+
+
+function cooperResult() {
+  return "Result"
+}
