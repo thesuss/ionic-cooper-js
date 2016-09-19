@@ -17,6 +17,11 @@ describe('Person', function() {
     expect(girl.distance).toEqual(1000);
   });
 
+  it("should have a poor Cooper Test Result", function() {
+    girl.cooperResult();
+    expect(girl.message).toEqual("Result");
+  });
+
   it("should be boy", function() {
     expect(boy.gender).toEqual('male');
   });
