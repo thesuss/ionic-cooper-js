@@ -9,7 +9,7 @@ Person.prototype.cooperResult = function(distance) {
   if (this.gender.toLowerCase() == 'male') {
     this.message = this.getCooperTestMale(distance);
   } else {
-    this.message = 'Result' //this.getCooperTestFemale(distance);
+    this.message = this.getCooperTestFemale(distance);
   }
 };
 
@@ -132,6 +132,26 @@ Person.prototype.getCooperTestMale = function(distance) {
       return 'Below Average'
     }
     if(distance < 1300){
+      return 'Poor'
+    }
+  }
+};
+
+Person.prototype.getCooperTestFemale = function(distance)  {
+  if(this.age>= 1 && this.age<= 14) {
+    if(distance >= 2000){
+      return 'Excellent'
+    }
+    if(distance >= 1900 && distance <= 1999){
+      return 'Above Average'
+    }
+    if(distance >= 1600 && distance <=1899){
+      return 'Average'
+    }
+    if(distance >= 1500 && distance <=1599){
+      return 'Below Average'
+    }
+    if(distance < 1500){
       return 'Poor'
     }
   }
