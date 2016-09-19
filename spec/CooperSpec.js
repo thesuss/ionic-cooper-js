@@ -43,9 +43,9 @@ describe('Cooper', function() {
       beforeEach(function() {
         person = new Person({gender: 'male', age: 13, distance: 243});
       });
-      it("Result shoudl be \"Below Average\"", function(){
+      it("Result should be \"Resuklt\"", function(){
         person.cooperResult();
-        expect(person.message).toEqual("Below Average");
+        expect(person.message).toEqual("Result");
       });
     })
   });

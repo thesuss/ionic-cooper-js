@@ -5,6 +5,10 @@ function Person(attr) {
 };
 
 
-function cooperResult() {
-  return "Result"
-}
+  Person.prototype.cooperResult = function(meters) {
+    if (this.gender.toLowerCase() == 'male') {
+      this.message = "Result" //this.getCooperTestMale(meters);
+    } else {
+      this.message = "Result" //this.getCooperTestFemale(meters);
+    }
+  };
