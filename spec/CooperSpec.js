@@ -76,7 +76,7 @@ describe('Person', function() {
     });
     it("Result male over 50 2000 should be \"Above Average\"", function(){
       person.age = 55;
-      person.cooperResult(2400);
+      person.cooperResult(2000);
       expect(person.message).toEqual("Above Average");
     });
   });
