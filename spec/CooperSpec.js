@@ -80,4 +80,47 @@ describe('Person', function() {
       expect(person.message).toEqual("Above Average");
     });
   });
+
+
+    describe("Feale testing", function() {
+      beforeEach(function() {
+        person = new Person({gender: 'female', age: 0, distance: 0});
+      });
+      it("Result female 13-14 2000m should be \"Excellent\"", function(){
+        person.age = 13;
+        person.cooperResult(2000);
+        expect(person.message).toEqual("Excellent");
+      });
+      it("Result female 15-16 1700m should be \"Average\"", function(){
+        person.age = 15;
+        person.cooperResult(1700);
+        expect(person.message).toEqual("Average");
+      });
+      it("Result female 17-19 2120m should be \"Above Average\"", function(){
+        person.age = 18;
+        person.cooperResult(2120);
+        expect(person.message).toEqual("Above Average");
+      });
+      it("Result female 20-29 2700m should be \"Excellent\"", function(){
+        person.age = 22;
+        person.cooperResult(2700);
+        expect(person.message).toEqual("Excellent");
+      });
+      it("Result female 30-39 1500 should be \"Below Average\"", function(){
+        person.age = 33;
+        person.cooperResult(1500);
+        expect(person.message).toEqual("Below Average");
+      });
+      it("Result female 45 1500 should be \"Average\"", function(){
+        person.age = 45;
+        person.cooperResult(1500);
+        expect(person.message).toEqual("Average");
+      });
+      it("Result female over 50 1800 should be \"Above Average\"", function(){
+        person.age = 55;
+        person.cooperResult(1800);
+        expect(person.message).toEqual("Above Average");
+      });
+    });
+
 });
