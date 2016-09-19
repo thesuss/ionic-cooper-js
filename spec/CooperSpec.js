@@ -41,37 +41,35 @@ describe('Person', function() {
   });
 
   describe("Male testing", function() {
-    describe("Age 13-14", function() {
-      it("Result for 2000 should be \"Poor\"", function(){
-        person = new Person({gender: 'male', age: 13, distance: 2000});
-        person.cooperResult(person.distance);
-        expect(person.message).toEqual("Poor");
-      });
+    beforeEach(function() {
+      person = new Person({gender: 'male', age: 0, distance: 0});
+    });
+    it("Result male 13-14 2000m should be \"Poor\"", function(){
+      person.age = 13;
+      person.cooperResult(2000);
+      expect(person.message).toEqual("Poor");
     });
 
-    describe("Age 15-16", function() {
-      it("Result for 2500 should be \"Above Average\"", function(){
-        person = new Person({gender: 'male', age: 15, distance: 2500});
-        person.cooperResult(person.distance);
-        expect(person.message).toEqual("Above Average");
-      });
+    it("Result male 15-16 2500m should be \"Above Average\"", function(){
+      person.age = 15;
+      person.cooperResult(2500);
+      expect(person.message).toEqual("Above Average");
     });
-
-    describe("Age 17-19", function() {
-      it("Result for 3000 should be \"Excellent\"", function(){
-        person = new Person({gender: 'male', age: 18, distance: 3000});
-        person.cooperResult(person.distance);
-        expect(person.message).toEqual("Excellent");
-      });
+    it("Result male 17-19 3000m should be \"Excellent\"", function(){
+      person.age = 18;
+      person.cooperResult(3000);
+      expect(person.message).toEqual("Excellent");
     });
-
-    describe("Age 20-29", function() {
-      it("Result for 2700 should be \"Above Average\"", function(){
-        person = new Person({gender: 'male', age: 22, distance: 2700});
-        person.cooperResult(person.distance);
-        expect(person.message).toEqual("Above Average");
-      });
+    it("Result male 20-29 2700m should be \"Above Average\"", function(){
+      person.age = 22;
+      person.cooperResult(2700);
+      expect(person.message).toEqual("Above Average");
     });
-
+    it("Result male 30-39 2700 should be \"Above Average\"", function(){
+      person.age = 33;
+      person.distance = 2700;
+      person.cooperResult(person.distance);
+      expect(person.message).toEqual("Above Average");
+    });
   });
 });
