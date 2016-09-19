@@ -189,4 +189,72 @@ Person.prototype.getCooperTestFemale = function(distance)  {
       return 'Poor'
     }
   }
+  if(this.age>= 20 && this.age<= 29) {
+    if(distance >= 2700){
+      return 'Excellent'
+    }
+    if(distance >= 2200 && distance <= 2699){
+      return 'Above Average'
+    }
+    if(distance >= 1800 && distance <=2199){
+      return 'Average'
+    }
+    if(distance >= 1500 && distance <=1799){
+      return 'Below Average'
+    }
+    if(distance < 1500){
+      return 'Poor'
+    }
+  }
+  if(this.age>= 30 && this.age<= 39) {
+    if(distance >= 2500){
+      return 'Excellent'
+    }
+    if(distance >= 2000 && distance <= 2499){
+      return 'Above Average'
+    }
+    if(distance >= 1700 && distance <=1999){
+      return 'Average'
+    }
+    if(distance >= 1400 && distance <=1699){
+      return 'Below Average'
+    }
+    if(distance < 1400){
+      return 'Poor'
+    }
+  }
+  if(this.age>= 40 && this.age<= 49) {
+    if(distance >= 2300){
+      return 'Excellent'
+    }
+    if(distance >= 1900 && distance <= 2299){
+      return 'Above Average'
+    }
+    if(distance >= 1500 && distance <=1899){
+      return 'Average'
+    }
+    if(distance >= 1200 && distance <=1499){
+      return 'Below Average'
+    }
+    if(distance < 1200){
+      return 'Poor'
+    }
+  }
+  if(this.age>= 50) {
+    if(distance >= 2200){
+      return 'Excellent'
+    }
+    if(distance >= 1700 && distance <= 2199){
+      return 'Above Average'
+    }
+    if(distance >= 1400 && distance <=1699){
+      return 'Average'
+    }
+    if(distance >= 1100 && distance <=1399){
+      return 'Below Average'
+    }
+    if(distance < 1100){
+      return 'Poor'
+    }
+  }
 };
