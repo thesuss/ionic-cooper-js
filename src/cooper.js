@@ -155,4 +155,21 @@ Person.prototype.getCooperTestFemale = function(distance)  {
       return 'Poor'
     }
   }
+  if(this.age>= 15 && this.age<= 16) {
+    if(distance >= 2100){
+      return 'Excellent'
+    }
+    if(distance >= 2000 && distance <= 2099){
+      return 'Above Average'
+    }
+    if(distance >= 1700 && distance <=1999){
+      return 'Average'
+    }
+    if(distance >= 1600 && distance <=1699){
+      return 'Below Average'
+    }
+    if(distance < 1600){
+      return 'Poor'
+    }
+  }
 };
