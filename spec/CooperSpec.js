@@ -42,16 +42,19 @@ describe('Person', function() {
 
   describe("Male testing", function() {
     describe("Age 13-14", function() {
-
-      beforeEach(function() {
-        person = new Person({gender: 'male', age: 13, distance: 2000});
-      });
-
       it("Result should be \"Poor\"", function(){
-        person.cooperResult(2000);
+        person = new Person({gender: 'male', age: 13, distance: 2000});
+        person.cooperResult(person.distance);
         expect(person.message).toEqual("Poor");
       });
+    });
 
-    })
+    describe("Age 15-16", function() {
+      it("Result should be \"Above Average\"", function(){
+        person = new Person({gender: 'male', age: 15, distance: 2500});
+        person.cooperResult(person.distance);
+        expect(person.message).toEqual("Above Average");
+      });
+    });
   });
 });
