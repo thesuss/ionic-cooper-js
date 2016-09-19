@@ -64,11 +64,11 @@ describe('Person', function() {
       person.cooperResult(2700);
       expect(person.message).toEqual("Above Average");
     });
-    it("Result male 30-39 2700 should be \"Above Average\"", function(){
+    it("Result male 30-39 2700 should be \"Excellent\"", function(){
       person.age = 33;
       person.distance = 2700;
       person.cooperResult(person.distance);
-      expect(person.message).toEqual("Above Average");
+      expect(person.message).toEqual("Excellent");
     });
   });
 });
