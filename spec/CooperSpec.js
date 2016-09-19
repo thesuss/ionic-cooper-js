@@ -1,5 +1,7 @@
-describe('Cooper', function() {
+describe('Person', function() {
   var person;
+  var girl;
+  var boy;
 
   describe("Assertions", function() {
     beforeEach(function() {
@@ -40,13 +42,16 @@ describe('Cooper', function() {
 
   describe("Male testing", function() {
     describe("Age 13-14", function() {
+
       beforeEach(function() {
-        person = new Person({gender: 'male', age: 13, distance: 243});
+        person = new Person({gender: 'male', age: 13, distance: 2000});
       });
-      it("Result should be \"Resuklt\"", function(){
-        person.cooperResult();
-        expect(person.message).toEqual("Result");
+
+      it("Result should be \"Poor\"", function(){
+        person.cooperResult(2000);
+        expect(person.message).toEqual("Poor");
       });
+
     })
   });
 });
