@@ -42,7 +42,7 @@ describe('Person', function() {
 
   describe("Male testing", function() {
     describe("Age 13-14", function() {
-      it("Result should be \"Poor\"", function(){
+      it("Result for 2000 should be \"Poor\"", function(){
         person = new Person({gender: 'male', age: 13, distance: 2000});
         person.cooperResult(person.distance);
         expect(person.message).toEqual("Poor");
@@ -50,7 +50,7 @@ describe('Person', function() {
     });
 
     describe("Age 15-16", function() {
-      it("Result should be \"Above Average\"", function(){
+      it("Result for 2500 should be \"Above Average\"", function(){
         person = new Person({gender: 'male', age: 15, distance: 2500});
         person.cooperResult(person.distance);
         expect(person.message).toEqual("Above Average");
@@ -58,11 +58,20 @@ describe('Person', function() {
     });
 
     describe("Age 17-19", function() {
-      it("Result should be \"Excellent\"", function(){
+      it("Result for 3000 should be \"Excellent\"", function(){
         person = new Person({gender: 'male', age: 18, distance: 3000});
         person.cooperResult(person.distance);
         expect(person.message).toEqual("Excellent");
       });
     });
+
+    describe("Age 20-29", function() {
+      it("Result for 2700 should be \"Above Average\"", function(){
+        person = new Person({gender: 'male', age: 22, distance: 2700});
+        person.cooperResult(person.distance);
+        expect(person.message).toEqual("Above Average");
+      });
+    });
+
   });
 });
