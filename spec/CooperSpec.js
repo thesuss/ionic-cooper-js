@@ -49,7 +49,6 @@ describe('Person', function() {
       person.cooperResult(2000);
       expect(person.message).toEqual("Poor");
     });
-
     it("Result male 15-16 2500m should be \"Above Average\"", function(){
       person.age = 15;
       person.cooperResult(2500);
