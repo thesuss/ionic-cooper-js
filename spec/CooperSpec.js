@@ -66,9 +66,18 @@ describe('Person', function() {
     });
     it("Result male 30-39 2700 should be \"Excellent\"", function(){
       person.age = 33;
-      person.distance = 2700;
-      person.cooperResult(person.distance);
+      person.cooperResult(2700);
       expect(person.message).toEqual("Excellent");
+    });
+    it("Result male 45 2000 should be \"Average\"", function(){
+      person.age = 45;
+      person.cooperResult(2000);
+      expect(person.message).toEqual("Average");
+    });
+    it("Result male over 50 2000 should be \"Above Average\"", function(){
+      person.age = 55;
+      person.cooperResult(2400);
+      expect(person.message).toEqual("Above Average");
     });
   });
 });
